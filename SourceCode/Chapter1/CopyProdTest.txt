@@ -1,0 +1,287 @@
+ALTER PROCEDURE [dbo].[spc_CopyProd2Test]
+
+AS
+
+/*
+
+SELECT o.name AS TableName,
+MAX(i.rowcnt) AS RowCnt
+FROM sys.sysobjects o 
+INNER JOIN sys.sysindexes i ON o.id = i.id 
+WHERE o.xtype = 'U'
+GROUP BY o.name
+
+This stored procedure pulls the contents of a database on one server into the table structures of 
+a database on another server. You can change the source server.database by doing a global replace of
+this string:
+
+[GBM-TEST].[Contracts]
+
+with the appropriate servername.databasename
+
+The commands it issues for each table are at follows:
+
+ALTER TABLE [dbo].MyTable NOCHECK CONSTRAINT PK_MyConstraint
+
+DELETE FROM dbo.[MyTable]
+
+SET IDENTITY_INSERT dbo.[MyTable] ON (if applicable)
+
+INSERT INTO dbo.[MyTable] ([MyColumn1],[MyColumn2]) SELECT [MyColumn1],[MyColumn2] FROM [MyServer].[MyDataBase].dbo.[MyColumn1]
+
+SET IDENTITY_INSERT dbo.[MyTable] OFF (if applicable)
+
+ALTER TABLE [dbo].MyTable CHECK CONSTRAINT PK_MyConstraint
+
+This procedure will remove all constraints, SET IDENTITY_INSERT ON for all tables which have identity
+columns, delete the contents of the table, INSERT..SELECT the data from the source table to the target, 
+SET IDENTITY_INSERT OFF as appropriate, and re-enable the constraints.
+*/
+
+DECLARE @SQL varchar(max)
+DECLARE @SQLTemplate varchar(max)
+DECLARE @Columns varchar(max)
+DECLARE @SQLError varchar(max)
+DECLARE @StartTime datetime
+DECLARE @ElapsedTime int
+DECLARE @TableSchemaOrig varchar(100)
+DECLARE @TableSchema varchar(100)
+DECLARE @TableNameOrig varchar(100)
+DECLARE @TableName varchar(100)
+DECLARE @ColumnName varchar(100)
+DECLARE @HasIdentityKey bit
+DECLARE @Cnt int
+DECLARE @RowsCopied int
+DECLARE @x int
+
+--If there are certain tables on the target you wish left alone, 
+--INSERT their names into the @SkipTables table variable
+DECLARE @SkipTables TABLE 
+(
+  TableName varchar(100)
+)
+
+INSERT INTO @SkipTables (TableName) VALUES ('SyncLog')
+INSERT INTO @SkipTables (TableName) VALUES ('User_Permission')
+INSERT INTO @SkipTables (TableName) VALUES ('User_X_Permission')
+INSERT INTO @SkipTables (TableName) VALUES ('SystemState')
+INSERT INTO @SkipTables (TableName) VALUES ('IncomingFax')
+INSERT INTO @SkipTables (TableName) VALUES ('IncomingFaxPages')
+INSERT INTO @SkipTables (TableName) VALUES ('Item_History')
+
+--Create a table to store error and progress messages
+IF NOT EXISTS (SELECT 1 FROM dbo.sysobjects WHERE id = object_id('SyncLog'))
+	BEGIN
+		CREATE TABLE SyncLog
+		(
+			ErrorNumber int,
+			Message varchar(max),
+			SQL varchar(max),
+			ErrorDate datetime,
+			ElapsedTime int
+		)
+	END
+ELSE
+	TRUNCATE TABLE SyncLog
+
+--Indicate when the process has begun
+INSERT INTO SyncLog 
+(ErrorNumber, Message, SQL, ErrorDate) 
+VALUES
+(Null, 'Migration begun', Null, GETDATE()) 
+
+--This will hold the SQL statements that are created
+CREATE TABLE #SQLtemp
+(
+	ID int identity(1,1),
+	SQL varchar(max)
+)
+
+--This will hold the structures of the tables to create comma-separated column lists 
+CREATE TABLE #Tabletemp
+(
+	ID int identity(1,1), 
+	TABLE_SCHEMA varchar(100),
+	TABLE_NAME varchar(100),
+	COLUMN_NAME varchar(100)
+)
+
+--Create SQL to turn off all the constraints
+INSERT INTO #SQLtemp
+	SELECT 'ALTER TABLE [' + SCHEMA_NAME(schema_id) + '].' + OBJECT_NAME(parent_object_id) + 
+	' NOCHECK CONSTRAINT ' + OBJECT_NAME(OBJECT_ID)
+	FROM sys.objects
+	WHERE type_desc LIKE '%CONSTRAINT'
+
+--Create SQL to truncate the tables for those tables which exist in both the source and target databases
+INSERT INTO #SQLtemp
+	SELECT 'DELETE FROM ' + t1.TABLE_SCHEMA + '.[' + t1.TABLE_NAME + ']'
+	FROM INFORMATION_SCHEMA.tables t1
+	INNER JOIN [GBM-TEST].[Contracts].INFORMATION_SCHEMA.tables t2 ON t1.TABLE_NAME = t2.TABLE_NAME 
+	WHERE t1.TABLE_TYPE = 'BASE TABLE'
+	AND t1.TABLE_NAME NOT IN (SELECT TableName FROM @SkipTables)
+	ORDER BY t1.TABLE_NAME
+
+--Create SQL to insert data for those tables and columns which exist in both the source and target databases
+INSERT INTO #Tabletemp
+	SELECT c1.TABLE_SCHEMA, c1.TABLE_NAME, c1.COLUMN_NAME
+	FROM [Contracts].INFORMATION_SCHEMA.columns c1
+	INNER JOIN INFORMATION_SCHEMA.tables t1 ON c1.TABLE_NAME = t1.TABLE_NAME
+	INNER JOIN [GBM-TEST].[Contracts].INFORMATION_SCHEMA.columns c2 ON c1.TABLE_NAME + c1.COLUMN_NAME = c2.TABLE_NAME + c2.COLUMN_NAME
+	WHERE t1.TABLE_TYPE = 'BASE TABLE'
+	AND c1.TABLE_NAME NOT IN (SELECT TableName FROM @SkipTables)
+	ORDER BY c1.TABLE_NAME, c1.ORDINAL_POSITION
+
+SET @Cnt = @@ROWCOUNT
+SET @x = 1
+SET @HasIdentityKey = 0
+SET @TableSchemaOrig = ''
+SET @TableNameOrig = ''
+SET @Columns = ''
+
+--This is the SQL template for the INSERT...SELECT. The strings delimited by percent signs will be
+--replaced with actual values
+SET @SQLTemplate = 'INSERT INTO %Table% (%Columns%) SELECT %Columns% FROM [GBM-TEST].[Contracts].%Table% WITH (NOLOCK)'
+SET @SQL = @SQLTemplate
+
+--For each table/column entry in #Tabletemp
+WHILE @x <= @Cnt
+	BEGIN
+		--Pull the information for a table/column entry 
+		SELECT @TableSchema = TABLE_SCHEMA,
+		@TableName = TABLE_NAME,
+		@ColumnName = COLUMN_NAME 
+		FROM #Tabletemp 
+		WHERE ID = @x
+
+		--If this is the first time through then assign the values of 
+		--the starting schema and table name
+		IF @TableSchemaOrig = ''
+			SET @TableSchemaOrig = @TableSchema
+
+		IF @TableNameOrig = ''
+			SET @TableNameOrig = @TableName
+
+		--If we haven't moved to a new table then keep building the column list
+		IF @TableNameOrig = @TableName
+			SET @Columns = @Columns + '[' + @ColumnName + '],'
+
+		--When all the table's column have been retrieved create SET IDENTITY_INSERT ON/OFF
+		--statements for those tables that have identity columns
+		IF @TableNameOrig <> @TableName
+			BEGIN
+				--The SET IDENTITY_INSERT <tablename> ON/OFF is appended to the INSERT..SELECT SQL
+				--because executing them individually was causing problems. Therefore, the commands are 
+				--executed as a semi-colon separated batch like this:
+				--SET IDENTITY_INSERT dbo.[MyTable] ON (if applicable);
+				--INSERT INTO dbo.[MyTable] ([MyColumn1],[MyColumn2]) SELECT [MyColumn1],[MyColumn2] FROM [MyServer].[MyDataBase].dbo.[MyColumn1];
+				--SET IDENTITY_INSERT dbo.[MyTable] OFF (if applicable)
+				IF EXISTS (SELECT TABLE_NAME
+							FROM INFORMATION_SCHEMA.COLUMNS 
+							WHERE TABLE_SCHEMA = @TableSchemaOrig
+							AND TABLE_NAME = @TableNameOrig
+							AND COLUMNPROPERTY(object_id(TABLE_NAME), COLUMN_NAME, 'IsIdentity') = 1)
+					BEGIN
+						SET @HasIdentityKey = 1
+					END
+
+				--Remove the trailing comma
+				SET @Columns = SUBSTRING(@Columns, 1, LEN(@Columns) - 1)
+
+				--Replace the placeholders with the table name and comma-delimited field list
+				SET @SQL = REPLACE(@SQL, '%Table%', @TableSchema + '.[' + @TableNameOrig + ']')
+				SET @SQL = REPLACE(@SQL, '%Columns%', @Columns)
+
+				--Create the SET IDENTITY_INSERT <tablename> OFF command if needed
+				IF @HasIdentityKey = 1
+					BEGIN
+						SET @SQL = 'SET IDENTITY_INSERT ' + @TableSchemaOrig + '.[' + @TableNameOrig + '] ON;' + @SQL
+
+						SET @SQL = @SQL + ';SET IDENTITY_INSERT ' + @TableSchemaOrig + '.[' + @TableNameOrig + '] OFF'
+					END
+	
+				INSERT INTO #SQLtemp (SQL) VALUES (@SQL)
+
+				SET @SQL = @SQLTemplate
+				SET @Columns = ''
+				SET @TableSchemaOrig = @TableSchema
+				SET @TableNameOrig = @TableName
+				SET @HasIdentityKey = 0
+
+			END
+		ELSE
+			SET @x = @x + 1
+					
+	END 
+
+DROP TABLE #Tabletemp
+
+--Create the SQL to re-enable the constraints
+INSERT INTO #SQLtemp
+	SELECT 'ALTER TABLE [' + SCHEMA_NAME(schema_id) + '].' + OBJECT_NAME(parent_object_id) + 
+	' CHECK CONSTRAINT ' + OBJECT_NAME(OBJECT_ID)
+	FROM sys.objects
+	WHERE type_desc LIKE '%CONSTRAINT'
+
+--Now that the SQL statements needed for the migration are ready and in 
+--the required order, execute each one
+SELECT @Cnt = MAX(ID) FROM #SQLtemp
+
+SET @x = 1
+
+WHILE @x <= @Cnt
+	BEGIN
+		
+		SELECT @SQL = SQL
+		FROM #SQLtemp
+		WHERE ID = @x
+	
+ 	    BEGIN TRY
+			SET @StartTime = GETDATE()
+
+			EXEC(@SQL)
+
+			SET @RowsCopied = @@ROWCOUNT
+
+			SET @ElapsedTime = DATEDIFF(SECOND, @StartTime, GETDATE())
+
+			--Write every successfully executed SQL command to SyncLog
+			INSERT INTO SyncLog 
+			(ErrorNumber, Message, SQL, ErrorDate, ElapsedTime) 
+			VALUES
+			(Null, 'OK - ' + CONVERT(varchar(10), @RowsCopied) + ' rows affected', @SQL, GETDATE(), @ElapsedTime)			
+		END TRY
+		BEGIN CATCH
+			SET @SQLError = @@ERROR
+
+			--If an error was found, write it to the SyncLog table. 
+			--One of the most common errors will be caused by trying to insert a value from a larger column 
+			--into that of a smaller column. This will happen if you reduced the size of a column in 
+			--your target to less than that of your source. In other cases, the data type may have changed
+			--and this will throw an error as well.
+			IF @SQLError <> 0
+				INSERT INTO SyncLog 
+				(ErrorNumber, Message, SQL, ErrorDate) 
+				VALUES
+				(@SQLError, Error_Message(), @SQL, GETDATE())
+		END CATCH
+
+		SET @x = @x + 1
+					
+	END 
+
+--Indicate when the process has ended
+INSERT INTO SyncLog 
+(ErrorNumber, Message, SQL, ErrorDate) 
+VALUES
+(Null, 'Migration completed', Null, GETDATE()) 
+
+--SELECT * FROM #SQLtemp ORDER BY ID
+
+DROP TABLE #SQLtemp
+
+--Discontinued command in SQL Server 2008. Use DBCC SHRINKFILE (N'test_log' , 1) instead
+BACKUP LOG Contracts WITH TRUNCATE_ONLY
+
+
+

@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{999D2CB9-9277-4465-A902-1604ED3686A3}") = "Report Model", "..\..\Chapter7\Report Model\Report Model\Report Model.smdlproj", "{CDFFCDB9-4D6B-4A28-AEF7-BB83558576A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDFFCDB9-4D6B-4A28-AEF7-BB83558576A0}.Production|Default.ActiveCfg = Production
+		{CDFFCDB9-4D6B-4A28-AEF7-BB83558576A0}.Production|Default.Build.0 = Production
+		{CDFFCDB9-4D6B-4A28-AEF7-BB83558576A0}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

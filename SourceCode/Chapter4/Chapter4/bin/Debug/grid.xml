@@ -1,0 +1,5 @@
+<DataGridView name="dataGridView1" sortedcolumn="" sortorder="Ascending">
+  <Column name="LastName" displayindex="0" width="64" visible="True" />
+  <Column name="FirstName" displayindex="2" width="267" visible="True" />
+  <Column name="DOB" displayindex="1" width="77" visible="True" />
+</DataGridView>

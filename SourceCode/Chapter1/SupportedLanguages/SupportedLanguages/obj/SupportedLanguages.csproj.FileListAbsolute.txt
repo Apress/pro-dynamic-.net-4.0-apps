@@ -1,0 +1,5 @@
+C:\DOCS\DataDrivenProgramming\Chapter1\SupportedLanguages\SupportedLanguages\bin\Debug\SupportedLanguages.exe
+C:\DOCS\DataDrivenProgramming\Chapter1\SupportedLanguages\SupportedLanguages\bin\Debug\SupportedLanguages.pdb
+C:\DOCS\DataDrivenProgramming\Chapter1\SupportedLanguages\SupportedLanguages\obj\Debug\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\Chapter1\SupportedLanguages\SupportedLanguages\obj\Debug\SupportedLanguages.exe
+C:\DOCS\DataDrivenProgramming\Chapter1\SupportedLanguages\SupportedLanguages\obj\Debug\SupportedLanguages.pdb

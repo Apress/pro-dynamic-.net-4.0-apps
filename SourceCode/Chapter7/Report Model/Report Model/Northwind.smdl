@@ -1,0 +1,508 @@
+﻿<SemanticModel ID="Gb7ae91af-d0ea-409e-9b90-c71f3932c5b5" xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Culture>en-US</Culture>
+  <Entities>
+    <Entity ID="Ga81c7508-495c-4c78-a622-3e80a0a2faf9">
+      <Name>Employee</Name>
+      <CollectionName>Employees</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <!--Last Name-->
+          <AttributeID>Gbe50da30-e537-4ada-a8bb-bf4bf0973c09</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <!--Last Name-->
+          <AttributeID>Gbe50da30-e537-4ada-a8bb-bf4bf0973c09</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--First Name-->
+          <AttributeID>G5298ac7b-eac8-44c3-b6ee-0dd3e872fb1c</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Home Phone-->
+          <AttributeID>G7feddc1b-1b5b-4af3-9041-9933bca02976</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <!--#Employees-->
+          <AttributeID>Ge42d77c4-4efa-461a-ae38-112bb5e743d1</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="Ge42d77c4-4efa-461a-ae38-112bb5e743d1">
+          <Name>#Employees</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <!--Employee-->
+                    <EntityID>Ga81c7508-495c-4c78-a622-3e80a0a2faf9</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G4d2d9aed-7752-4fc8-988b-7d24fc169853">
+          <Name>Employee ID</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EmployeeID" />
+        </Attribute>
+        <Attribute ID="Gbe50da30-e537-4ada-a8bb-bf4bf0973c09">
+          <Name>Last Name</Name>
+          <DataType>String</DataType>
+          <SortDirection>Ascending</SortDirection>
+          <Width>9</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="LastName" />
+        </Attribute>
+        <Attribute ID="G5298ac7b-eac8-44c3-b6ee-0dd3e872fb1c">
+          <Name>First Name</Name>
+          <DataType>String</DataType>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="FirstName" />
+        </Attribute>
+        <Attribute ID="G0010b95b-937b-4435-b99b-2968d4718eb9">
+          <Name>Title</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>24</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Title" />
+        </Attribute>
+        <Attribute ID="G42097fa2-9f00-4e15-8cbf-cc2d28c79174">
+          <Name>Title Of Courtesy</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>4</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="TitleOfCourtesy" />
+        </Attribute>
+        <Attribute ID="G4c2ccf17-702f-473d-a398-2f0ef4e06c80">
+          <Name>Birth Date</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="G4058550d-57d9-4a81-97ff-e24cb6bd44db">
+              <Name>Birth Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Birth Date-->
+                        <AttributeID>G4c2ccf17-702f-473d-a398-2f0ef4e06c80</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gcb492666-45df-4a23-8200-6de3369218d4">
+              <Name>Birth Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Birth Date-->
+                        <AttributeID>G4c2ccf17-702f-473d-a398-2f0ef4e06c80</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G927f3acc-2971-4e86-b316-6b320a925a1e">
+              <Name>Birth Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Birth Date-->
+                        <AttributeID>G4c2ccf17-702f-473d-a398-2f0ef4e06c80</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Gb49a1160-f4ff-441b-98d7-8337a903805e">
+              <Name>Birth Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Birth Date-->
+                        <AttributeID>G4c2ccf17-702f-473d-a398-2f0ef4e06c80</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G4407708e-4e9f-482c-8989-b22c45a2e061">
+              <Name>First Birth Date</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Birth Date-->
+                        <AttributeID>G4c2ccf17-702f-473d-a398-2f0ef4e06c80</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G5b752725-04fd-4584-8333-e07aa7c59ae4">
+              <Name>Last Birth Date</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Birth Date-->
+                        <AttributeID>G4c2ccf17-702f-473d-a398-2f0ef4e06c80</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="BirthDate" />
+        </Attribute>
+        <Attribute ID="G0aeb856d-824b-4be5-b712-6117b1e6ceed">
+          <Name>Hire Date</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="G06f833f8-5a0c-4cc6-b42e-e46fafb85ffd">
+              <Name>Hire Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Hire Date-->
+                        <AttributeID>G0aeb856d-824b-4be5-b712-6117b1e6ceed</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G3c6e942b-9977-48ce-9a0b-85c3e7de4577">
+              <Name>Hire Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Hire Date-->
+                        <AttributeID>G0aeb856d-824b-4be5-b712-6117b1e6ceed</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G27ed85e6-8cdb-4924-b406-b976447a45eb">
+              <Name>Hire Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Hire Date-->
+                        <AttributeID>G0aeb856d-824b-4be5-b712-6117b1e6ceed</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="G18e08358-ce50-4fc4-8c7d-67627c849527">
+              <Name>Hire Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Hire Date-->
+                        <AttributeID>G0aeb856d-824b-4be5-b712-6117b1e6ceed</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="Gf08bce9e-bae7-4d93-bde0-7e02f8360633">
+              <Name>First Hire Date</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Hire Date-->
+                        <AttributeID>G0aeb856d-824b-4be5-b712-6117b1e6ceed</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G41f4ca72-e951-4109-8b5c-d306206f618a">
+              <Name>Last Hire Date</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Hire Date-->
+                        <AttributeID>G0aeb856d-824b-4be5-b712-6117b1e6ceed</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="HireDate" />
+        </Attribute>
+        <Attribute ID="G0bfa0b03-d2a3-4c71-85a0-d92c2ce17366">
+          <Name>Address</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>30</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Address" />
+        </Attribute>
+        <Attribute ID="G891d559a-dc1d-463d-af53-ee8afaa535b8">
+          <Name>City</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="City" />
+        </Attribute>
+        <Attribute ID="G79cc0146-07b4-4e5a-87c1-1a8da8fa79be">
+          <Name>Region</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Region" />
+        </Attribute>
+        <Attribute ID="G634a686e-67c4-440d-8205-d616a64dcfaa">
+          <Name>Postal Code</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>7</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PostalCode" />
+        </Attribute>
+        <Attribute ID="G82f36e94-67fa-40c4-b811-d25a151cb0ac">
+          <Name>Country</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>3</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Country" />
+        </Attribute>
+        <Attribute ID="G7feddc1b-1b5b-4af3-9041-9933bca02976">
+          <Name>Home Phone</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>14</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="HomePhone" />
+        </Attribute>
+        <Attribute ID="G7b336873-80d2-4125-a920-82eb06b74bc1">
+          <Name>Extension</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>4</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Extension" />
+        </Attribute>
+        <Attribute ID="G04d94170-410a-4e8c-973e-0ab1b6a65759">
+          <Name>Photo</Name>
+          <DataType>Binary</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <MimeType>image/jpeg</MimeType>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="Photo" />
+        </Attribute>
+        <Attribute ID="Ge852a3d8-127e-4bfb-ba32-c7cf28a67691">
+          <Name>Notes</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="Notes" />
+        </Attribute>
+        <Attribute ID="G392e4776-4935-4366-af8c-1e63d654a285">
+          <Name>Photo Path</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>38</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PhotoPath" />
+        </Attribute>
+        <Attribute ID="Gf4bfc84d-4404-4d5a-80e9-c4a7ce4dd0f5">
+          <Name>Favorite Beer</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Column Name="FavoriteBeer" />
+        </Attribute>
+        <Attribute ID="G164d9248-1c0d-41c5-b177-2d4d594c85ce">
+          <Name>Favorite Beer ID</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>1</Width>
+          <Format>g</Format>
+          <Column Name="FavoriteBeerID" />
+        </Attribute>
+        <Attribute ID="G7328d204-6131-477b-9df7-d1509af57c5d">
+          <Name>Beer ID</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>1</Width>
+          <Format>g</Format>
+          <Column Name="BeerID" />
+        </Attribute>
+        <Role ID="G548bc905-c61c-494b-b92a-f8e063bfb94f">
+          <!--Reports To-->
+          <RelatedRoleID>G76d9ed32-c9d0-440d-9f55-5e444190453e</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="FK_Employees_Employees" RelationEnd="Source" />
+        </Role>
+        <Role ID="G76d9ed32-c9d0-440d-9f55-5e444190453e">
+          <Name>Reports To</Name>
+          <!--Employees-->
+          <RelatedRoleID>G548bc905-c61c-494b-b92a-f8e063bfb94f</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="FK_Employees_Employees" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_Employees" />
+    </Entity>
+  </Entities>
+</SemanticModel>

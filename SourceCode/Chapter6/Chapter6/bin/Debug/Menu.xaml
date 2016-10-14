@@ -1,0 +1,13 @@
+            <Menu xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                <MenuItem Header="File">
+                    <MenuItem Header="Customers"/>
+                    <MenuItem Header="Vendors"/>
+                    <MenuItem Header="Accounts"/>
+                </MenuItem>
+                <MenuItem Header="Reports">
+                    <MenuItem Header="Personnel"/>
+                    <MenuItem Header="Invoice Register"/>
+                    <MenuItem Header="Aging Schedule"/>
+                </MenuItem>
+            </Menu>

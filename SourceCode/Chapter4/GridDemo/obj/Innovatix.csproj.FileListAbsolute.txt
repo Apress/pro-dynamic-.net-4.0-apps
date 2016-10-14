@@ -1,0 +1,15 @@
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\InnovatixDLL.dll
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\InnovatixDLL.pdb
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\DataAccess.dll
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\bin\Debug\DataAccess.pdb
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\ResolveAssemblyReference.cache
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\Innovatix.csproj.ResolveComReference.cache
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\InnovatixDLL.HelpViewer.resources
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\InnovatixCommon.SelectColumns.resources
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\Innovatix.csproj.GenerateResource.Cache
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\InnovatixDLL.dll.licenses
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\InnovatixDLL.dll
+C:\InnovatixDLL\InnovatixDLL\InnovatixDLL\obj\Debug\InnovatixDLL.pdb

@@ -1,0 +1,28 @@
+<Form name="Members" text="Member Information" width="387" height="427" top="0" left="0">
+  <Controls>
+    <Control name="chkActive" type="CheckBox" width="56" height="17" top="9" left="295" text="Active" />
+    <Control name="groupBox1" type="GroupBox" width="274" height="94" top="32" left="5" text="Address">
+      <Control name="cmbState" type="ComboBox" width="209" height="21" top="70" left="59" dropdownstyle="DropDown" />
+      <Control name="label6" type="Label" width="35" height="13" top="73" left="10" text="State:" />
+      <Control name="txtCity" type="TextBox" width="209" height="20" top="45" left="59" />
+      <Control name="label5" type="Label" width="27" height="13" top="48" left="10" text="City:" />
+      <Control name="txtAddress" type="TextBox" width="209" height="20" top="19" left="59" />
+      <Control name="label4" type="Label" width="48" height="13" top="22" left="10" text="Address:" />
+    </Control>
+    <Control name="txtMember" type="TextBox" width="199" height="20" top="6" left="80" />
+    <Control name="label1" type="Label" width="79" height="13" top="9" left="2" text="Member Name:" />
+    <Control name="cmdSave" type="Button" width="75" height="23" top="41" left="295" text="Save" />
+    <Control name="cmdClose" type="Button" width="75" height="23" top="70" left="295" text="Close" />
+    <Control name="tabControl1" type="TabControl" width="374" height="258" top="132" left="5">
+      <Control name="tabPage1" type="TabPage" width="366" height="232" top="22" left="4" text="Contracts">
+        <Control name="lstOptions" type="CheckedListBox" width="218" height="169" top="58" left="7" />
+        <Control name="cmbVendor" type="ComboBox" width="166" height="21" top="16" left="59" dropdownstyle="DropDown" />
+        <Control name="label2" type="Label" width="44" height="13" top="17" left="13" text="Vendor:" />
+      </Control>
+      <Control name="tabPage2" type="TabPage" width="366" height="232" top="22" left="4" text="Orders">
+        <Control name="label3" type="Label" width="62" height="13" top="13" left="10" text="Order Date:" />
+        <Control name="txtOrderDate" type="DateTimePicker" width="126" height="20" top="9" left="78" />
+      </Control>
+    </Control>
+  </Controls>
+</Form>

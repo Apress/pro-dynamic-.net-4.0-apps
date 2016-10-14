@@ -1,0 +1,22 @@
+﻿<Window x:Class="Chapter6.MenuDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Menu" Height="300" Width="300" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Margin="12,12,11,11" Name="stackPanel1">
+            <Menu xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                <MenuItem Header="File">
+                    <MenuItem Header="Customers" Click="Menu_Click"/>
+                    <MenuItem Header="Vendors" Click="Menu_Click"/>
+                    <MenuItem Header="Accounts" Click="Menu_Click"/>
+                </MenuItem>
+                <MenuItem Header="Reports">
+                    <MenuItem Header="Personnel" Click="Menu_Click"/>
+                    <MenuItem Header="Invoice Register" Click="Menu_Click"/>
+                    <MenuItem Header="Aging Schedule" Click="Menu_Click"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+    </Grid>
+</Window>

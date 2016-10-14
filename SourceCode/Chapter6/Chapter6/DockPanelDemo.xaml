@@ -1,0 +1,15 @@
+﻿<Window x:Class="Chapter6.DockPanelDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DockPanel" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="12,12,12,0" Name="grid1">
+            <DockPanel Margin="12" Name="dockPanel1" LastChildFill="False">
+            <Button DockPanel.Dock="Left" Name="cmdA">A</Button>
+            <Button DockPanel.Dock="Top" Name="cmdB">B</Button>
+            <Button DockPanel.Dock="Right" Name="cmdC">C</Button>
+            <Button DockPanel.Dock="Bottom" Name="cmdD">D</Button>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Chapter7.exe
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Chapter7.pdb
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\Chapter7.Form1.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\Chapter7.Properties.Resources.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\Chapter7.csproj.GenerateResource.Cache
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\Chapter7.exe
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\Chapter7.pdb
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\obj\Debug\Chapter7.ThirdPartyTools.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter7\Chapter7\bin\Debug\itextsharp.dll

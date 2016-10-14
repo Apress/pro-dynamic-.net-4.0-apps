@@ -1,0 +1,171 @@
+﻿<DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Northwind</ID>
+  <Name>Northwind</Name>
+  <Annotations xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Northwind</DataSourceID>
+  <Schema>
+    <xs:schema id="Northwind" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Northwind" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4610a4b4-9151-4b77-9a27-44180347f094" msprop:CompareInfo="&lt;CompareInfo&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;IgnoreCase&gt;true&lt;/IgnoreCase&gt;&lt;IgnoreKanaType&gt;true&lt;/IgnoreKanaType&gt;&lt;IgnoreWidth&gt;true&lt;/IgnoreWidth&gt;&lt;/CompareInfo&gt;">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Employees" msprop:FriendlyName="Employees" msprop:DbSchemaName="dbo" msprop:DbTableName="Employees" msprop:design-time-name="54a925ca-e755-485f-9112-9aaa5662241d" msprop:TableType="Table" msprop:stats_RowCount="9">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="int" msprop:FriendlyName="EmployeeID" msprop:design-time-name="fa05d040-205c-41f4-9106-bdf0d5cea14e" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="0" msprop:stats_AvgWidth="1" msprop:DbColumnName="EmployeeID" type="xs:int" />
+                  <xs:element name="LastName" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="nvarchar" msprop:FriendlyName="LastName" msprop:design-time-name="0848d2c9-3ef7-451f-915b-bce44c84809c" msprop:stats_MaxWidth="9" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="1.615893" msprop:stats_AvgWidth="7.111111" msprop:DbColumnName="LastName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FirstName" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="nvarchar" msprop:FriendlyName="FirstName" msprop:design-time-name="d00eece4-89d7-4656-b084-cd3cca97a574" msprop:stats_MaxWidth="8" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="1.20185" msprop:stats_AvgWidth="5.777778" msprop:DbColumnName="FirstName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Title" msprop:stats_UniqueValuePercent="44" msprop:DbDataType="nvarchar" msprop:FriendlyName="Title" msprop:design-time-name="8701f4a2-b199-4867-a942-b6ec4318d7c3" msprop:stats_MaxWidth="24" msprop:stats_UniqueValueCount="4" msprop:stats_StDevWidth="2.862594" msprop:stats_AvgWidth="19.77778" msprop:DbColumnName="Title" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TitleOfCourtesy" msprop:stats_UniqueValuePercent="44" msprop:DbDataType="nvarchar" msprop:FriendlyName="TitleOfCourtesy" msprop:design-time-name="a9bf18b0-79f1-48a9-8432-b761b29c6d93" msprop:stats_MaxWidth="4" msprop:stats_UniqueValueCount="4" msprop:stats_StDevWidth="0.3333333" msprop:stats_AvgWidth="3.111111" msprop:DbColumnName="TitleOfCourtesy" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BirthDate" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="datetime" msprop:FriendlyName="BirthDate" msprop:design-time-name="854dbb3f-79c2-4dc4-89cc-5acf63f546c0" msprop:stats_UniqueValueCount="9" msprop:DbColumnName="BirthDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="HireDate" msprop:stats_UniqueValuePercent="88" msprop:DbDataType="datetime" msprop:FriendlyName="HireDate" msprop:design-time-name="eebcee28-74b9-498e-afba-bd38a12ea155" msprop:stats_UniqueValueCount="8" msprop:DbColumnName="HireDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Address" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="nvarchar" msprop:FriendlyName="Address" msprop:design-time-name="b4627109-375a-45bb-9f40-82486261793d" msprop:stats_MaxWidth="30" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="5.044249" msprop:stats_AvgWidth="21.22222" msprop:DbColumnName="Address" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:stats_UniqueValuePercent="55" msprop:DbDataType="nvarchar" msprop:FriendlyName="City" msprop:design-time-name="07744b4a-0154-4575-a177-ec4c323506a6" msprop:stats_MaxWidth="8" msprop:stats_UniqueValueCount="5" msprop:stats_StDevWidth="0.7264832" msprop:stats_AvgWidth="6.555555" msprop:DbColumnName="City" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Region" msprop:stats_UniqueValuePercent="20" msprop:DbDataType="nvarchar" msprop:FriendlyName="Region" msprop:design-time-name="a1c9cf58-8329-4042-a84a-8caa8fa776e0" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="1" msprop:stats_StDevWidth="0" msprop:stats_AvgWidth="2" msprop:DbColumnName="Region" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PostalCode" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="nvarchar" msprop:FriendlyName="PostalCode" msprop:design-time-name="a76cc9a0-6e96-4990-ab97-51eb5c5675ef" msprop:stats_MaxWidth="7" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="1.054093" msprop:stats_AvgWidth="5.888889" msprop:DbColumnName="PostalCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Country" msprop:stats_UniqueValuePercent="22" msprop:DbDataType="nvarchar" msprop:FriendlyName="Country" msprop:design-time-name="ccd269e5-d771-4749-914c-cc4d65c726cc" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="2" msprop:stats_StDevWidth="0.5270463" msprop:stats_AvgWidth="2.555556" msprop:DbColumnName="Country" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HomePhone" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="nvarchar" msprop:FriendlyName="HomePhone" msprop:design-time-name="5afb3340-9236-4446-9e08-6bd1965a0bfa" msprop:stats_MaxWidth="14" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="0.5270463" msprop:stats_AvgWidth="13.55556" msprop:DbColumnName="HomePhone" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="24" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Extension" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="nvarchar" msprop:FriendlyName="Extension" msprop:design-time-name="c2a33725-a506-4511-a0d0-b89da5ed9a21" msprop:stats_MaxWidth="4" msprop:stats_UniqueValueCount="9" msprop:stats_StDevWidth="0.5" msprop:stats_AvgWidth="3.666667" msprop:DbColumnName="Extension" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Photo" msprop:DataSize="2147483647" msprop:FriendlyName="Photo" msprop:stats_UniqueValuePercent="100" msprop:DbDataType="image" msprop:IsBlob="True" msprop:design-time-name="42691bd2-8ab3-485c-810f-c2501f515fda" msprop:stats_UniqueValueCount="9" msprop:DbColumnName="Photo" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="Notes" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="Notes" msprop:DbDataType="ntext" msprop:IsBlob="True" msprop:design-time-name="a8e7fa1f-1e85-4a92-9c49-eeec9733021b" msprop:stats_UniqueValueCount="9" msprop:DbColumnName="Notes" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1073741823" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ReportsTo" msprop:stats_UniqueValuePercent="25" msprop:DbDataType="int" msprop:FriendlyName="ReportsTo" msprop:design-time-name="413533b5-6716-4dcc-9c42-f5185e46cbcc" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="2" msprop:stats_StDevWidth="0" msprop:stats_AvgWidth="1" msprop:DbColumnName="ReportsTo" type="xs:int" minOccurs="0" />
+                  <xs:element name="PhotoPath" msprop:stats_UniqueValuePercent="55" msprop:DbDataType="nvarchar" msprop:FriendlyName="PhotoPath" msprop:design-time-name="5235215c-b461-4ddb-8b25-95f169658557" msprop:stats_MaxWidth="38" msprop:stats_UniqueValueCount="5" msprop:stats_StDevWidth="0.8333333" msprop:stats_AvgWidth="36.22222" msprop:DbColumnName="PhotoPath" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FavoriteBeer" msprop:stats_UniqueValuePercent="0" msprop:DbDataType="varchar" msprop:FriendlyName="FavoriteBeer" msprop:design-time-name="f1a184a6-3ef5-4ef5-a20c-b35c5decb74f" msprop:stats_MaxWidth="0" msprop:stats_UniqueValueCount="0" msprop:stats_StDevWidth="0" msprop:stats_AvgWidth="0" msprop:DbColumnName="FavoriteBeer" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FavoriteBeerID" msprop:stats_UniqueValuePercent="0" msprop:DbDataType="int" msprop:FriendlyName="FavoriteBeerID" msprop:design-time-name="8854a2f5-be7f-4bfa-bb09-460cdfdfb5c2" msprop:stats_MaxWidth="0" msprop:stats_UniqueValueCount="0" msprop:stats_StDevWidth="0" msprop:stats_AvgWidth="0" msprop:DbColumnName="FavoriteBeerID" type="xs:int" minOccurs="0" />
+                  <xs:element name="BeerID" msprop:stats_UniqueValuePercent="0" msprop:DbDataType="int" msprop:FriendlyName="BeerID" msprop:design-time-name="bf373179-9fa3-4ec5-aa97-f27420514e27" msprop:stats_MaxWidth="0" msprop:stats_UniqueValueCount="0" msprop:stats_StDevWidth="0" msprop:stats_AvgWidth="0" msprop:DbColumnName="BeerID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Employees" />
+          <xs:field xpath="EmployeeID" />
+        </xs:unique>
+        <xs:keyref name="FK_Employees_Employees" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Employees" />
+          <xs:field xpath="ReportsTo" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+  </Schema>
+</DataSourceView>

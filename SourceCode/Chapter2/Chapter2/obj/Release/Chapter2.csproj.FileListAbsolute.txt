@@ -1,0 +1,8 @@
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\ReflectionDemo.AssemblyExplorer.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\ReflectionDemo.Chapter2.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\ReflectionDemo.Member.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\ReflectionDemo.ReflectionTypes.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\ReflectionDemo.SelectForm.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\Reflection.Properties.Resources.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter2\Chapter2\obj\Release\Chapter2.csproj.GenerateResource.Cache

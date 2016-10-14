@@ -1,0 +1,17 @@
+﻿<Window x:Class="Chapter6.WiringEvents"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="WiringEvents" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Margin="86,122,91,117" Name="cmdCodeInXAML" 
+        Click="cmdCodeInXAML_Click">Code In XAML</Button>
+        <x:Code>
+            <![CDATA[
+                void cmdCodeInXAML_Click(object sender, RoutedEventArgs e)
+                {
+                    MessageBox.Show("You clicked me!");
+                }
+              ]]>
+        </x:Code>
+    </Grid>
+</Window>

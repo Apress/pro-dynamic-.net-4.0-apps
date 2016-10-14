@@ -1,0 +1,17 @@
+﻿<Window x:Class="Chapter6.SimpleWPFWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Sample" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="108*" />
+            <ColumnDefinition Width="170*" />
+        </Grid.ColumnDefinitions>
+        <Label Height="28" Margin="24,88,27,0" Name="label1" 
+               VerticalAlignment="Top">User ID:</Label>
+        <Button Margin="99,0,104,106" Name="cmdOK" Height="23" 
+                VerticalAlignment="Bottom" Grid.ColumnSpan="2">OK</Button>
+        <TextBox Height="23" Margin="87,90,28,0" Name="txtUserID" 
+                 VerticalAlignment="Top" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>

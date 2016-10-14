@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Chapter8">
+</Property><Property Name="Solution File" Value="C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Chapter8.sln">
+</Property><Property Name="User Options File" Value="C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Chapter8.suo">
+</Property><Property Name="Date" Value="Wednesday, July 15, 2009">
+</Property><Property Name="Time" Value="6:24 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Chapter8.sln" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Chapter8.suo" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8.suo">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Chapter8.csproj" Description="Project file successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Chapter8.csproj">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Form1.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Form1.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\InvertedTable.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\InvertedTable.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Program.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Program.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Properties\Settings.settings" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Form1.resx" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Properties\Resources.resx" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Backup\Chapter8\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Chapter8.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Chapter8" Source="Chapter8\Chapter8.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Chapter8.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Chapter8.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Chapter8" Source="Chapter8\Chapter8.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

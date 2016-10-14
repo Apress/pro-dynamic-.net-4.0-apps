@@ -1,0 +1,4 @@
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Chapter8\obj\Debug\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Chapter8\obj\Debug\Chapter8.Form1.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Chapter8\obj\Debug\Chapter8.Properties.Resources.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter8\Chapter8\obj\Debug\Chapter8.csproj.GenerateResource.Cache

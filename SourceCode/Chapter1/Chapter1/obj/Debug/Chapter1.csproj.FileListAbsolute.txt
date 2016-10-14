@@ -1,0 +1,13 @@
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\obj\Debug\CodeGen.exe
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\obj\Debug\CodeGen.pdb
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\CodeGen.exe
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\CodeGen.pdb
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\obj\Debug\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\obj\Debug\Chapter1.Form1.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\obj\Debug\CodeGen.Properties.Resources.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter1\Chapter1\obj\Debug\Chapter1.csproj.GenerateResource.Cache

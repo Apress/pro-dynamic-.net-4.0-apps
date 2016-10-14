@@ -1,0 +1,25 @@
+﻿<Window x:Class="Chapter6.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Chapter 6 - WPF" Height="502" Width="286" WindowStartupLocation="CenterScreen">
+    <Grid Height="489">
+        <StackPanel Margin="12" Name="stackPanel1">
+            <Button Height="23" Name="cmdSimpleWPFWindow" Width="150" Margin="2" Click="cmdSimpleWPFWindow_Click">Simple WPF Window</Button>
+            <Button Height="23" Name="cmdStackPanelDemo" Width="150" Margin="2" Click="cmdStackPanelDemo_Click">Stack Panel Demo</Button>
+            <Button Height="23" Name="cmdWrapPanelDemo" Width="150" Margin="2" Click="cmdWrapPanelDemo_Click">Wrap Panel Demo</Button>
+            <Button Height="23" Name="cmdDockPanelDemo" Width="150" Margin="2" Click="cmdDockPanelDemo_Click">Dock Panel Demo</Button>
+            <Button Height="23" Name="cmdCanvasDemo" Width="150" Margin="2" Click="cmdCanvasDemo_Click">Canvas Demo</Button>
+            <Button Height="23" Name="cmdXAMLForCanvas" Width="150" Margin="2" Click="cmdXAMLForCanvas_Click">XAML For Canvas</Button>
+            <Button Height="23" Name="cmdGridDemo" Width="150" Margin="2" Click="cmdGridDemo_Click">Grid Demo</Button>
+            <Button Height="23" Name="cmdDynamicWPF" Width="150" Margin="2" Click="cmdDynamicWPF_Click">Dynamic WPF</Button>
+            <Button Height="23" Name="cmdDynamicGrid" Width="150" Margin="2" Click="cmdDynamicGrid_Click">Dynamic Grid</Button>
+            <Button Height="23" Name="cmdNestedControls" Width="150" Margin="2" Click="cmdNestedControls_Click">Nested Controls</Button>
+            <Button Height="23" Name="cmdXAMLReader" Width="150" Margin="2" Click="cmdXAMLReader_Click">XAML Reader</Button>
+            <Button Height="23" Name="cmdPersistingObjects" Width="150" Margin="2" Click="cmdPersistingObjects_Click">Persisting Objects</Button>
+            <Button Height="23" Name="cmdAncestorDescendant" Width="150" Margin="2" Click="cmdAncestorDescendant_Click">Ancestor/Descendant</Button>
+            <Button Height="23" Name="cmdWiringEvents" Width="150" Margin="2" Click="cmdWiringEvents_Click">Wiring Events</Button>
+            <Button Height="23" Name="cmdMenuDemo" Width="150" Click="cmdMenuDemo_Click">Menu Demo</Button>
+            <Button Height="23" Name="cmdDynamicMenu" Width="150" Click="cmdDynamicMenu_Click">Dynamic Menu</Button>
+        </StackPanel>
+    </Grid>
+</Window>

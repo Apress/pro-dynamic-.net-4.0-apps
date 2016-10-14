@@ -1,0 +1,14 @@
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\obj\Debug\Filter.exe
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\obj\Debug\Filter.pdb
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Filter.exe
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Filter.pdb
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Microsoft.Practices.Unity.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.xml
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.xml
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\obj\Debug\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\obj\Debug\Filter.Form1.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\obj\Debug\Filter.Properties.Resources.resources
+C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter\obj\Debug\Filter.csproj.GenerateResource.Cache

@@ -1,0 +1,12 @@
+﻿<Window x:Class="Chapter6.XAMLForCanvas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="XAML For Canvas" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Name="button1" Height="26" VerticalAlignment="Top" Margin="20,76,126,0">Button</Button>
+        <CheckBox Height="20" Margin="20,50,138,0" Name="checkBox1" VerticalAlignment="Top">CheckBox</CheckBox>
+        <ComboBox Height="23" Margin="64,21,94,0" Name="comboBox1" VerticalAlignment="Top" />
+        <Label Height="28" Margin="12,21,0,0" Name="label1" VerticalAlignment="Top" 
+HorizontalAlignment="Left" Width="46">State:</Label>
+    </Grid>
+</Window>

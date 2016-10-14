@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form name="WinForms" text="WinForms" width="232" height="179" top="0" left="0">
+  <Controls>
+    <Control name="cmdSuspendResumeLayout" type="Button" width="160" height="23" top="105" left="32" text="Suspend/Resume Layout" />
+    <Control name="cmdDisplayButtonForm" type="Button" width="160" height="23" top="74" left="32" text="Display Button Form" />
+    <Control name="cmdDisplayForm" type="Button" width="160" height="23" top="45" left="32" text="Display Form" />
+    <Control name="cmdNestedControls" type="Button" width="160" height="23" top="16" left="32" text="Nested Controls" />
+    <Control name="cmdLoadReflectionInfo" type="Button" width="128" height="23" top="-189" left="12" text="Load Reflection Info" />
+  </Controls>
+</Form>

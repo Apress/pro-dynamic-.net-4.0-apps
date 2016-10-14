@@ -1,0 +1,16 @@
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\obj\Debug\CodeGen.Form1.resources
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\obj\Debug\CodeGen.Properties.Resources.resources
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\obj\Debug\CodeGen.csproj.GenerateResource.Cache
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\bin\Debug\CodeGen.exe
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\bin\Debug\CodeGen.pdb
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\obj\Debug\CodeGen.exe
+C:\Documents and Settings\cganz\My Documents\Visual Studio 2005\Projects\CodeGen\CodeGen\obj\Debug\CodeGen.pdb
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\obj\Debug\CodeGen.exe
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\obj\Debug\CodeGen.pdb
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\bin\Debug\CodeGen.exe
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\bin\Debug\CodeGen.pdb
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\obj\Debug\CodeGen.Form1.resources
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\obj\Debug\CodeGen.Properties.Resources.resources
+C:\DOCS\DataDrivenProgramming\CodeGen\CodeGen\obj\Debug\CodeGen.csproj.GenerateResource.Cache

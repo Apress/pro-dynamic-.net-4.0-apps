@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <Reference filename="C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents\Microsoft.SqlServer.DataReaderDest.dll" />
+  <Reference filename="C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents\Microsoft.SqlServer.ADONETSrc.dll" />
+  <Reference filename="C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents\Microsoft.SqlServer.ADONETDest.dll" />
+</settings>

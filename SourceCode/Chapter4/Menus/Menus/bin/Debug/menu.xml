@@ -1,0 +1,14 @@
+<MainMenu>
+   <MainMenuItem Text="Accounts" Name="mnuAccounts" Enabled="true" Checked="false">
+      <MenuItem Text="Receivable" Name="mnuReceivable" Click="Receivables" Enabled="true" Checked="false"/>
+      <MenuItem Text="Payable" Name="mnuPayable" Click="Payables" Enabled="true" Checked="false">
+         <MenuItem Text="Overdue Report" Name="mnuOverdueReport" Click="Overdue" Enabled="true" Checked="false"/>
+         <MenuItem Text="Aging Schedule" Name="mnuAgingSchedule" Click="Aging" Enabled="true" Checked="false"/>
+      </MenuItem>
+</MainMenuItem>
+   <MainMenuItem Text="Employees" Name="mnuEmployees" Enabled="true" Checked="false">
+      <MenuItem Text="Personnel" Name="mnuPersonnel" Click="PersonnelMgt" Enabled="true" Checked="false"/>
+      <MenuItem Text="Print Roster" Name="mnuPrintRoster" Click="Roster" Enabled="true" Checked="false"/>
+   </MainMenuItem>
+</MainMenu>
+

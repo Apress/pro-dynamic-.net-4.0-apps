@@ -1,0 +1,8 @@
+﻿<Window x:Class="Chapter6.DynamicGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DynamicGrid" Height="300" Width="300" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid Name="Grid1">
+        <Button Height="23" Margin="112,0,91,12" Name="cmdIterateChildren" VerticalAlignment="Bottom" Click="cmdGetData_Click">Button</Button>
+    </Grid>
+</Window>

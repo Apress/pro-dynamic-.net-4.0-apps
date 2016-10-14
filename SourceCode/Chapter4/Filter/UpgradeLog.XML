@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Filter">
+</Property><Property Name="Solution File" Value="C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter.sln">
+</Property><Property Name="User Options File" Value="C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Filter.suo">
+</Property><Property Name="Date" Value="Monday, October 26, 2009">
+</Property><Property Name="Time" Value="18:18 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Filter.sln" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Filter.suo" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter.suo">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Filter.csproj" Description="Project file successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Filter.csproj">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Form1.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Form1.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Program.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Program.cs">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Properties\Settings.settings" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Form1.resx" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Properties\Resources.resx" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Filter\Backup\Filter\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Filter.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Filter" Source="Filter\Filter.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Filter.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Filter.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Filter" Source="Filter\Filter.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

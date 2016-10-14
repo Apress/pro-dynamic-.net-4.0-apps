@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Menus">
+</Property><Property Name="Solution File" Value="C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Menus.sln">
+</Property><Property Name="User Options File" Value="C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Menus.suo">
+</Property><Property Name="Date" Value="Monday, October 26, 2009">
+</Property><Property Name="Time" Value="18:10 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Menus.sln" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Menus.suo" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus.suo">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Menus.csproj" Description="Project file successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Menus.csproj">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Form1.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Form1.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Program.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Program.cs">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Properties\Settings.settings" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Resources\failure.jpg" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Resources\failure.jpg">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Form1.resx" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Properties\Resources.resx" Description="File successfully backed up as C:\DOCS\DataDrivenProgramming\SourceCode\Chapter4\Menus\Backup\Menus\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Menus.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Menus" Source="Menus\Menus.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Menus.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Menus.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Menus" Source="Menus\Menus.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
